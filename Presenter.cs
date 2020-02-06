@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BL;
 
-namespace Double_Sybtitle
-{
+namespace Double_Sybtitle 
+{ 
     class Presenter
     {
         IMainForm mainForm;
