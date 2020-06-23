@@ -39,6 +39,8 @@
             this.ColorSecondSybtitle = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +95,7 @@
             // 
             // buttonSeveFile
             // 
+            this.buttonSeveFile.Enabled = false;
             this.buttonSeveFile.Location = new System.Drawing.Point(174, 204);
             this.buttonSeveFile.Name = "buttonSeveFile";
             this.buttonSeveFile.Size = new System.Drawing.Size(75, 23);
@@ -132,7 +135,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(398, 37);
+            this.numericUpDown1.Location = new System.Drawing.Point(398, 61);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             150,
             0,
@@ -155,7 +158,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(398, 117);
+            this.numericUpDown2.Location = new System.Drawing.Point(398, 144);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             150,
             0,
@@ -176,11 +179,31 @@
             0});
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(395, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Text size";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(395, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Text size";
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(469, 268);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.ColorSecondSybtitle);
@@ -214,6 +237,8 @@
         private System.Windows.Forms.Button ColorSecondSybtitle;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

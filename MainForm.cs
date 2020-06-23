@@ -102,14 +102,23 @@ namespace Double_Sybtitle
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                Path1 = dlg.InitialDirectory + dlg.FileName;
-                FilePath = dlg.InitialDirectory;
-                FileName = dlg.FileName.Length > 5 ? dlg.FileName.Substring(0, dlg.FileName.Length - 6) + "double" : "double";
-                if (FirstFileOpenClick != null)
+                try
                 {
-                    FirstFileOpenClick(this, EventArgs.Empty);
-                    trueOpenFirst = true;
+                    Path1 = dlg.InitialDirectory + dlg.FileName;
+                    FilePath = dlg.InitialDirectory;
+                    FileName = dlg.FileName.Length > 5 ? dlg.FileName.Substring(0, dlg.FileName.Length - 6) + "double" : "double";
+                    if (FirstFileOpenClick != null)
+                    {
+                        FirstFileOpenClick(this, EventArgs.Empty);
+                        trueOpenFirst = true;
+                    }
+                    buttonSeveFile.Enabled = (trueOpenFirst && trueOpenSecond) ? true : false;
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
             }
         }
 
@@ -120,28 +129,52 @@ namespace Double_Sybtitle
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                Path2 = dlg.InitialDirectory + dlg.FileName;
-                if (SecondFileClick != null)
+                try
                 {
-                    SecondFileClick(this, EventArgs.Empty);
-                    trueOpenSecond = true;
+                    Path2 = dlg.InitialDirectory + dlg.FileName;
+                    if (SecondFileClick != null)
+                    {
+                        SecondFileClick(this, EventArgs.Empty);
+                        trueOpenSecond = true;
+                    }
+                    buttonSeveFile.Enabled = (trueOpenFirst && trueOpenSecond) ? true : false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
 
         private void SeveFile_Click(object sender, EventArgs e)
         {
+
+
             sfd.Filter = "|*.srt";
             sfd.InitialDirectory = _filePath;
             sfd.FileName = FileName;
 
-            if ( trueOpenFirst && trueOpenSecond && sfd.ShowDialog() == DialogResult.OK )
+            if (trueOpenFirst && trueOpenSecond && sfd.ShowDialog() == DialogResult.OK)
             {
-                FileName = sfd.FileName;
-                FilePath = sfd.InitialDirectory;
-                if (FirstFileOpenClick != null)
-                    FileSeveClick(this, EventArgs.Empty);
+                try
+                {
+                    FileName = sfd.FileName;
+                    FilePath = sfd.InitialDirectory;
+                    if (FirstFileOpenClick != null)
+                        FileSeveClick(this, EventArgs.Empty);
+                    MessageBox.Show($"Completed!\n\n Path:{FileName}");
+                    trueOpenFirst = false;
+                    trueOpenSecond = false;
+                    buttonSeveFile.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
+
             }
+
         }
 
         private void ColorSecondSybtitle_Click(object sender, EventArgs e)

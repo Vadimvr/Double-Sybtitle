@@ -30,3 +30,24 @@ BL/bin/Debug/BL.pdb
 BL/obj/Debug/BL.csproj.FileListAbsolute.txt
 BL/obj/Debug/BL.dll
 BL/obj/Debug/BL.pdb
+/.vs
+/bin/Release
+/BL/bin/Release
+/BL/obj/Debug
+BL/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+BL/obj/Release/BL.csproj.CoreCompileInputs.cache
+BL/obj/Release/BL.csproj.FileListAbsolute.txt
+BL/obj/Release/BL.dll
+BL/obj/Release/BL.pdb
+obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+obj/Debug/Double Sybtitle.csproj.CoreCompileInputs.cache
+obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+obj/Release/Double Sybtitle.csproj.CopyComplete
+obj/Release/Double Sybtitle.csproj.CoreCompileInputs.cache
+obj/Release/Double Sybtitle.csproj.FileListAbsolute.txt
+obj/Release/Double Sybtitle.csproj.GenerateResource.cache
+obj/Release/Double Sybtitle.csprojAssemblyReference.cache
+obj/Release/Double_Sybtitle.MainForm.resources
+obj/Release/DoubleSybtitle.exe
+obj/Release/DoubleSybtitle.pdb
+obj/Release/DoubleSybtitle.Properties.Resources.resources

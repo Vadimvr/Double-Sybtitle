@@ -32,10 +32,12 @@ namespace BL
         void SubtitleToList()
         {
              StreamReader sr = File.OpenText(Path);
+            
             {
                 string s = "";
                 while ((s = sr.ReadLine()) != null)
                 {
+                                      
                     if (s == "/n" || (s.Length < 4 && s.DefaultIfEmpty().All(char.IsDigit)))
                         continue;
                     else
